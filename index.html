@@ -1,0 +1,1512 @@
+<!DOCTYPE HTML>
+<html class="" translate="no">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta http-equiv='content-language' content='en-gb'>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="app:pageurl" content="/"/>
+
+    <!-- title -->
+    <title>QuickRef.ME - Quick Reference Cheat Sheet</title>
+    <!-- keywords -->
+    <meta name="keywords" content="reference,cheatsheet,code table,snippets,linux"/>
+    <!-- description -->
+    <meta name="description" content="Share quick reference and cheat sheet for developers"/>
+
+    <!-- for social -->
+    <meta property="og:url" content="https://quickref.me/index.html"/>
+    <meta property="og:title" content="QuickRef.ME - Quick Reference Cheat Sheet"/>
+    <meta property="og:site_name" content="QuickRef.ME"/>
+    <meta property="og:description" content="Share quick reference and cheat sheet for developers"/>
+    <meta property="og:image" content="https://quickref.me/assets/image/?v=es62v"/>
+    <meta property="og:image:width" content="2276"/>
+    <meta property="og:image:height" content="1240"/>
+    <meta property="og:type" content="website"/>
+
+    <!-- twitter share-->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="QuickRef.ME - Quick Reference Cheat Sheet"/>
+    <meta name="twitter:site" content="@QuickRef.ME">
+    <meta name="twitter:creator" content="@QuickRef.ME">
+    <meta name="twitter:description" content="Share quick reference and cheat sheet for developers"/>
+    <meta name="twitter:image" content="https://quickref.me/assets/image/?v=1lcho"/>
+
+    <!-- favicon -->
+    <link rel="icon" href="/images/favicon.png?v=1"/>
+    <link rel="icon shortcut" type="image/png" href="/images/favicon.png?v=1"/>
+
+    <!-- misc -->
+    <link rel="canonical" href="https://quickref.me/index.html"/>
+    <link rel="prefetch" href="https://quickref.me"/>
+    <link rel="prerender" href="https://quickref.me"/>
+    <link rel="alternate" href="/atom.xml" title="QuickRef.ME" type="application/atom+xml"/>
+
+    <!-- font -->
+    <link rel="preload" href="/font/iconfont.woff2?1668928635" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/font/iconfont.css">
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            let html = document.documentElement.classList;
+            html.toggle('dark')
+        }
+    </script>
+
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-900">
+
+<header class="home bg-blue-500 dark:bg-slate-800">
+    <div class="max-container z-10">
+        <div class="flex flex-row justify-between md:justify-start items-center py-3">
+            <a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300">
+    
+        <div class="hidden md:flex justify-center w-10 h-10 md:w-12 md:h-12 text-white p-2 bg-emerald-500 rounded-full mr-3">
+            <i class="self-center icon icon-logo text-2xl"></i>
+        </div>
+    
+    <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">Quick<span class="text-emerald-400">Ref</span>.ME</span>
+</a>
+
+
+            <div class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <button id="mysearch-trigger" type="button"
+                        class="fadeIn inline-flex h-8 items-center bg-slate-200 dark:bg-gray-900 md:dark:bg-transparent md:bg-transparent rounded-full px-2 md:px-3 lg:px-6 py-2 text-white  md:hover:opacity-80">
+                    <i class="icon icon-search md:text-xl text-slate-700 dark:text-slate-300 md:text-white md:mr-2"></i>
+                    <span class="hidden md:inline dark:text-slate-300">Search for cheatsheet</span>
+                    <span class="hidden md:inline dark:text-slate-300 md:ml-2 text-sm leading-5 py-0.5 px-1.5 border border-slate-300 rounded-md">
+                        <span class="font-sans">⌘</span>
+                        <span class="font-sans">K</span>
+                    </span>
+                </button>
+                <a href="/sponsor/">
+                    <button type="button"
+                            class="fadeIn inline-flex h-8 items-center rounded-full bg-slate-200 dark:bg-gray-900 text-slate-700 dark:text-gray-300 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:bg-slate-300 md:dark:hover:bg-slate-800">
+                        <i class="icon icon-heart text-red-600 animate-pulse md:mr-2"></i>
+                        <span class="hidden md:inline text-sm">Sponsor</span>
+                    </button>
+                </a>
+                
+                <button id="darkMode" class="fadeIn inline-flex items-center justify-center flex-shrink-0 h-8 w-8 rounded-full text-gray-900 ml-1 lg:ml-4 dark:text-gray-300 bg-gray-200 dark:bg-gray-900">
+                    <i class="icon icon-light text-gray-600 dark:text-gray-300 dark:hover:text-white"></i>
+                </button>
+                <a href="https://facebook.com/sharer/sharer.php?u=https://quickref.me/index.html" rel="external nofollow noreferrer" target="_blank">
+                    <button type="button"
+                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4a66ad] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
+                        <i class="icon icon-facebook"></i>
+                        <span class="hidden">Facebook</span>
+                    </button>
+                </a>
+                <a href="https://twitter.com/intent/tweet/?text=Share%20quick%20reference%20and%20cheat%20sheet%20for%20developers&url=https://quickref.me/index.html" rel="external nofollow noreferrer" target="_blank">
+                    <button type="button"
+                            class="fadeIn inline-flex h-8 w-8 justify-center items-center rounded-full bg-[#4d9feb] text-slate-100 ml-1 lg:ml-4 px-2 md:px-3 py-2 md:hover:opacity-80">
+                        <i class="icon icon-twitter"></i>
+                        <span class="hidden">Twitter</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="w-full flex flex-col bg-blue-500 dark:bg-slate-800 text-center pt-14">
+    <div class="max-container lg:w-3/4">
+        <h1 class="text-4xl md:text-5xl text-slate-50 dark:text-slate-300 leading-relaxed">Quick Reference</h1>
+        <h2 class="text-xl md:text-2xl text-slate-200 dark:text-slate-300 leading-tight font-extralight tracking-wide text-base mt-6 mb-20">
+            Here are some cheatsheets and quick references contributed by open source angels.
+        </h2>
+    </div>
+</section>
+
+<section class="home max-container">
+    <div class="w-full lg:w-2/3 flex flex-col mx-auto justify-center mt-10">
+        <section class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+    
+        
+        <a href="/bash.html">
+            <div class="card bg-[#3e4548]">
+                <i class="icon icon-bash"></i>
+                <p>Bash</p>
+            </div>
+        </a>
+    
+        
+        <a href="/python.html">
+            <div class="card bg-[#436b97]">
+                <i class="icon icon-python"></i>
+                <p>Python</p>
+            </div>
+        </a>
+    
+        
+        <a href="/javascript.html">
+            <div class="card bg-[#ebd94e]">
+                <i class="icon icon-javascript"></i>
+                <p>JavaScript</p>
+            </div>
+        </a>
+    
+        
+        <a href="/golang.html">
+            <div class="card bg-[#4ba4cc]">
+                <i class="icon icon-golang"></i>
+                <p>Golang</p>
+            </div>
+        </a>
+    
+        
+        <a href="/vim.html">
+            <div class="card bg-[#46933f]">
+                <i class="icon icon-vim"></i>
+                <p>Vim</p>
+            </div>
+        </a>
+    
+        
+        <a href="/regex.html">
+            <div class="card bg-[#e56d2d]">
+                <i class="icon icon-regex"></i>
+                <p>RegEX</p>
+            </div>
+        </a>
+    
+        
+        <a href="/awk.html">
+            <div class="card bg-slate-600">
+                <i class="icon icon-style"></i>
+                <p>Awk</p>
+            </div>
+        </a>
+    
+        
+        <a href="/markdown.html">
+            <div class="card bg-[#6319bf]">
+                <i class="icon icon-markdown"></i>
+                <p>Markdown</p>
+            </div>
+        </a>
+    
+</section>
+        <div class="mt-6">
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Programming</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/rust.html">
+    <div class="card bg-black"  >
+        <i class="icon icon-rust"></i>
+        <p>Rust</p>
+    </div>
+</a>
+
+                    
+                        <a href="/cs.html">
+    <div class="card bg-[#8c4c8a]"  >
+        <i class="icon icon-cs"></i>
+        <p>C#</p>
+    </div>
+</a>
+
+                    
+                        <a href="/laravel.html">
+    <div class="card bg-[#e44230]"  data-label="PHP"  >
+        <i class="icon icon-laravel"></i>
+        <p>Laravel</p>
+    </div>
+</a>
+
+                    
+                        <a href="/dart.html">
+    <div class="card bg-[#58aee9]"  >
+        <i class="icon icon-dart"></i>
+        <p>Dart</p>
+    </div>
+</a>
+
+                    
+                        <a href="/json.html">
+    <div class="card bg-[#646464]"  >
+        <i class="icon icon-json"></i>
+        <p>JSON</p>
+    </div>
+</a>
+
+                    
+                        <a href="/html.html">
+    <div class="card bg-[#cc5534]"  >
+        <i class="icon icon-html"></i>
+        <p>HTML</p>
+    </div>
+</a>
+
+                    
+                        <a href="/graphql.html">
+    <div class="card bg-[#cc44a2]"  >
+        <i class="icon icon-graphql"></i>
+        <p>GraphQL</p>
+    </div>
+</a>
+
+                    
+                        <a href="/cpp.html">
+    <div class="card bg-[#6d94c7]"  >
+        <i class="icon icon-cpp"></i>
+        <p>C++</p>
+    </div>
+</a>
+
+                    
+                        <a href="/java.html">
+    <div class="card bg-[#d33731]"  >
+        <i class="icon icon-java"></i>
+        <p>Java</p>
+    </div>
+</a>
+
+                    
+                        <a href="/php.html">
+    <div class="card bg-[#7477a9]"  >
+        <i class="icon icon-php"></i>
+        <p>PHP</p>
+    </div>
+</a>
+
+                    
+                        <a href="/docker.html">
+    <div class="card bg-[#488fdf]"  >
+        <i class="icon icon-docker"></i>
+        <p>Docker</p>
+    </div>
+</a>
+
+                    
+                        <a href="/toml.html">
+    <div class="card bg-[#848484]"  >
+        <i class="icon icon-toml"></i>
+        <p>TOML</p>
+    </div>
+</a>
+
+                    
+                        <a href="/yaml.html">
+    <div class="card bg-[#b42e28]"  >
+        <i class="icon icon-yaml"></i>
+        <p>YAML</p>
+    </div>
+</a>
+
+                    
+                        <a href="/css.html">
+    <div class="card bg-[#3473b5]"  >
+        <i class="icon icon-css"></i>
+        <p>CSS 3</p>
+    </div>
+</a>
+
+                    
+                        <a href="/jquery.html">
+    <div class="card bg-[#2c63a2]"  >
+        <i class="icon icon-jquery"></i>
+        <p>jQuery</p>
+    </div>
+</a>
+
+                    
+                        <a href="/javascript.html">
+    <div class="card bg-[#ebd94e]"  >
+        <i class="icon icon-javascript"></i>
+        <p>JavaScript</p>
+    </div>
+</a>
+
+                    
+                        <a href="/python.html">
+    <div class="card bg-[#436b97]"  >
+        <i class="icon icon-python"></i>
+        <p>Python</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sass.html">
+    <div class="card bg-[#ba6993]"  data-label="CSS"  >
+        <i class="icon icon-sass"></i>
+        <p>Sass</p>
+    </div>
+</a>
+
+                    
+                        <a href="/golang.html">
+    <div class="card bg-[#4ba4cc]"  >
+        <i class="icon icon-golang"></i>
+        <p>Golang</p>
+    </div>
+</a>
+
+                    
+                        <a href="/markdown.html">
+    <div class="card bg-[#6319bf]"  >
+        <i class="icon icon-markdown"></i>
+        <p>Markdown</p>
+    </div>
+</a>
+
+                    
+                        <a href="/bash.html">
+    <div class="card bg-[#3e4548]"  >
+        <i class="icon icon-bash"></i>
+        <p>Bash</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Toolkit</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/vscode.html">
+    <div class="card bg-[#5ba3e6]"  >
+        <i class="icon icon-vscode"></i>
+        <p>VSCode</p>
+    </div>
+</a>
+
+                    
+                        <a href="/mitmproxy.html">
+    <div class="card bg-[#d86138]"  >
+        <i class="icon icon-mitmproxy"></i>
+        <p>Mitmproxy</p>
+    </div>
+</a>
+
+                    
+                        <a href="/xpath.html">
+    <div class="card bg-[#77aeeb]"  >
+        <i class="icon icon-xpath"></i>
+        <p>XPath</p>
+    </div>
+</a>
+
+                    
+                        <a href="/emacs.html">
+    <div class="card bg-[#7752a9]"  >
+        <i class="icon icon-emacs"></i>
+        <p>Emacs</p>
+    </div>
+</a>
+
+                    
+                        <a href="/emmet.html">
+    <div class="card bg-[#95c844]"  >
+        <i class="icon icon-emmet"></i>
+        <p>Emmet</p>
+    </div>
+</a>
+
+                    
+                        <a href="/regex.html">
+    <div class="card bg-[#e56d2d]"  >
+        <i class="icon icon-regex"></i>
+        <p>RegEX</p>
+    </div>
+</a>
+
+                    
+                        <a href="/vim.html">
+    <div class="card bg-[#46933f]"  >
+        <i class="icon icon-vim"></i>
+        <p>Vim</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Linux Command</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/pm2.html">
+    <div class="card bg-[#230769]"  >
+        <i class="icon icon-pm2"></i>
+        <p>PM2</p>
+    </div>
+</a>
+
+                    
+                        <a href="/chmod.html">
+    <div class="card bg-emerald-600"  >
+        <i class="icon icon-permission"></i>
+        <p>Chmod</p>
+    </div>
+</a>
+
+                    
+                        <a href="/tmux.html">
+    <div class="card bg-emerald-600"  >
+        <i class="icon icon-tmux"></i>
+        <p>Tmux</p>
+    </div>
+</a>
+
+                    
+                        <a href="/lsof.html">
+    <div class="card bg-blue-400"  >
+        <i class="icon icon-style"></i>
+        <p>Lsof</p>
+    </div>
+</a>
+
+                    
+                        <a href="/ssh.html">
+    <div class="card bg-blue-400"  >
+        <i class="icon icon-style"></i>
+        <p>SSH</p>
+    </div>
+</a>
+
+                    
+                        <a href="/netstat.html">
+    <div class="card bg-slate-700"  >
+        <i class="icon icon-netstat"></i>
+        <p>Netstat</p>
+    </div>
+</a>
+
+                    
+                        <a href="/screen.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-style"></i>
+        <p>Screen</p>
+    </div>
+</a>
+
+                    
+                        <a href="/awk.html">
+    <div class="card bg-slate-600"  >
+        <i class="icon icon-style"></i>
+        <p>Awk</p>
+    </div>
+</a>
+
+                    
+                        <a href="/find.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-search"></i>
+        <p>Find</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sed.html">
+    <div class="card bg-red-400"  >
+        <i class="icon icon-sed"></i>
+        <p>Sed</p>
+    </div>
+</a>
+
+                    
+                        <a href="/cron.html">
+    <div class="card bg-red-500"  >
+        <i class="icon icon-cron"></i>
+        <p>Cron</p>
+    </div>
+</a>
+
+                    
+                        <a href="/git.html">
+    <div class="card bg-[#d7593e]"  >
+        <i class="icon icon-git"></i>
+        <p>Git</p>
+    </div>
+</a>
+
+                    
+                        <a href="/grep.html">
+    <div class="card bg-emerald-400"  >
+        <i class="icon icon-grep"></i>
+        <p>Grep</p>
+    </div>
+</a>
+
+                    
+                        <a href="/nc.html">
+    <div class="card bg-blue-600"  >
+        <i class="icon icon-netcat"></i>
+        <p>Netcat</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">IDE</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/idea.html">
+    <div class="card bg-gradient-to-r from-pink-500 via-violet-400 to-blue-400 hover:from-pink-700 hover:via-violet-600 hover:to-blue-500"  >
+        <i class="icon icon-idea"></i>
+        <p>IntelliJ IDEA</p>
+    </div>
+</a>
+
+                    
+                        <a href="/webstorm.html">
+    <div class="card bg-gradient-to-r from-emerald-300 to-blue-400 hover:from-emerald-400 hover:to-blue-500"  >
+        <i class="icon icon-webstorm"></i>
+        <p>WebStorm</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Python</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/numpy.html">
+    <div class="card bg-[#4f6fc3]"  >
+        <i class="icon icon-numpy"></i>
+        <p>Numpy</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Database</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/neo4j.html">
+    <div class="card bg-[#3b85ef]"  >
+        <i class="icon icon-neo4j"></i>
+        <p>Neo4j</p>
+    </div>
+</a>
+
+                    
+                        <a href="/postgres.html">
+    <div class="card bg-[#3d6488]"  >
+        <i class="icon icon-postgres"></i>
+        <p>PostgreSQL</p>
+    </div>
+</a>
+
+                    
+                        <a href="/redis.html">
+    <div class="card bg-[#c13b2c]"  >
+        <i class="icon icon-redis"></i>
+        <p>Redis</p>
+    </div>
+</a>
+
+                    
+                        <a href="/mysql.html">
+    <div class="card bg-[#2a6387]"  >
+        <i class="icon icon-mysql"></i>
+        <p>MySQL</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Keyboard Shortcuts</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/adobe-photoshop.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-adobe-photoshop"></i>
+        <p>Adobe Photoshop Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/apex-legends.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-apex legends"></i>
+        <p>Apex Legends Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/figma.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-figma"></i>
+        <p>Figma Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/microsoft-teams.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-microsoft-teams"></i>
+        <p>Microsoft Teams Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/table-plus.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-tableplus"></i>
+        <p>TablePlus Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/bear-notes.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-bear"></i>
+        <p>Bear Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/feedly.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-feedly"></i>
+        <p>Feedly Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/filezilla.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-filezilla"></i>
+        <p>FileZilla Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/reddit.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-reddit"></i>
+        <p>Reddit Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/slack.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-slack"></i>
+        <p>Slack Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/soundcloud.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-soundcloud"></i>
+        <p>SoundCloud Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/twitter.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-twitter"></i>
+        <p>Twitter Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/android-studio.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-android-studio"></i>
+        <p>Android Studio Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/github.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-github"></i>
+        <p>Github Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/shopify.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-shopify"></i>
+        <p>Shopify Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/zoom.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-zoom"></i>
+        <p>Zoom  Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/adobe-xd.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-adobe-xd"></i>
+        <p>Adobe XD Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/firefox.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-firefox"></i>
+        <p>Firefox Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/phpstorm.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-phpstorm"></i>
+        <p>PhpStorm Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/postman.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-postman"></i>
+        <p>Postman Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/webflow.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-webflow"></i>
+        <p>Webflow Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/1password.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-1password"></i>
+        <p>1Password Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/adobe-lightroom.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-adobe-lightroom"></i>
+        <p>Adobe Lightroom CC Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/affinity-designer.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-affinity-designer"></i>
+        <p>Affinity Designer Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/pocket.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-pocket"></i>
+        <p>Pocket Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/trello.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-trello"></i>
+        <p>Trello Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/audacity.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-audacity"></i>
+        <p>Audacity Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/framer-x.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-framer x"></i>
+        <p>Framer X Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/google-drive.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-google-drive"></i>
+        <p>Google Drive Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/putty.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-putty"></i>
+        <p>PuTTy Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sequel-pro.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-sequel-pro"></i>
+        <p>Sequel Pro Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/apple-music.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-apple music"></i>
+        <p>Apple Music Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/blender.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-blender"></i>
+        <p>Blender Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/obsidian.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-obsidian"></i>
+        <p>Obsidian Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/telegram.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-telegram"></i>
+        <p>Telegram Desktop Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/youtube.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-youtube"></i>
+        <p>YouTube Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/airtable.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-airtable"></i>
+        <p>Airtable Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/bitbucket.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-bitbucket"></i>
+        <p>Bitbucket Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/fortnite.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-fortnite"></i>
+        <p>Fortnite Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/gmail.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-gmail"></i>
+        <p>Gmail Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/spotify.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-spotify"></i>
+        <p>Spotify Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sketch.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-sketch"></i>
+        <p>Sketch Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/brave.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-brave-browser"></i>
+        <p>Brave Browser Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/kanbanmail.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-kanbanmail"></i>
+        <p>KanbanMail Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/outlook.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-microsoft-outlook"></i>
+        <p>Microsoft Outlook Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/principle.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-principle"></i>
+        <p>Principle Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/skype.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-skype"></i>
+        <p>Skype Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/arduino.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-arduino ide"></i>
+        <p>Arduino IDE Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/asana.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-asana"></i>
+        <p>Asana Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/code-editor-ios.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-code-editor"></i>
+        <p>Code Editor for iOS Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/jira.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-jira"></i>
+        <p>Jira Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/quip.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-quip.com"></i>
+        <p>Quip.com Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/wordpress.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-wordpress"></i>
+        <p>WordPress Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/chrome-devtools.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-developer-tools"></i>
+        <p>Chrome Developer Tools Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/gimp.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-gimp"></i>
+        <p>GIMP Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/google-chrome.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-chrome"></i>
+        <p>Google Chrome Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/todoist.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-todoist"></i>
+        <p>Todoist Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/ticktick.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-ticktick"></i>
+        <p>TickTick Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/vlc.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-vlc"></i>
+        <p>VLC Player Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/missive.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-missive"></i>
+        <p>Missive Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/origami.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-origami-studio"></i>
+        <p>Origami Studio Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sublime-text.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-sublime-text"></i>
+        <p>Sublime Text Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/transmit.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-transmit"></i>
+        <p>Transmit Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/affinity-photo.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-affinity-photo"></i>
+        <p>Affinity Photo Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/monday.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-monday"></i>
+        <p>Monday.com Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/proto-io.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-proto.io"></i>
+        <p>Proto.io Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/superhuman.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-superhuman"></i>
+        <p>Superhuman Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/vivaldi.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-vivaldi-browser"></i>
+        <p>Vivaldi Browser Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/finder.html">
+    <div class="card bg-emerald-500"  data-label="Mac"  >
+        <i class="icon icon-finder"></i>
+        <p>Finder Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/gitlab.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-gitlab"></i>
+        <p>GitLab Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/guitar-pro.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-guitar pro"></i>
+        <p>Guitar Pro Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/roam.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-roam-research"></i>
+        <p>Roam Research Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/sketchup.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-sketchup"></i>
+        <p>SketchUp Pro Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                        <a href="/unity-3d.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-unity 3d"></i>
+        <p>Unity 3D Keyboard Shortcuts</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+                <h2 class="sm:text-xl font-medium mt-12 mb-2 text-slate-800 dark:text-slate-300">Other</h2>
+                <div class="h-1 bg-slate-200 dark:bg-slate-900 ounded-full overflow-hidden mb-6">
+                    <div class="w-24 h-full bg-emerald-500 dark:bg-slate-800"></div>
+                </div>
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 text-slate-800">
+                    
+                        <a href="/aspect-ratio.html">
+    <div class="card bg-emerald-600"  >
+        <i class="icon icon-style"></i>
+        <p>Aspect Ratio</p>
+    </div>
+</a>
+
+                    
+                        <a href="/html-char.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-style"></i>
+        <p>HTML Characters Entities</p>
+    </div>
+</a>
+
+                    
+                        <a href="/iso-639-1.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-style"></i>
+        <p>ISO 639-1 Language Code</p>
+    </div>
+</a>
+
+                    
+                        <a href="/resolutions.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-style"></i>
+        <p>Resolutions</p>
+    </div>
+</a>
+
+                    
+                        <a href="/http-status-code.html">
+    <div class="card bg-[#3b7dc0]"  >
+        <i class="icon icon-style"></i>
+        <p>HTTP Status Code</p>
+    </div>
+</a>
+
+                    
+                        <a href="/emoji.html">
+    <div class="card bg-[#ebbe46]"  >
+        <i class="icon icon-emoji"></i>
+        <p>Emoji</p>
+    </div>
+</a>
+
+                    
+                        <a href="/quickref.html">
+    <div class="card bg-gradient-to-l from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"  >
+        <i class="icon icon-logo"></i>
+        <p>QuickRef</p>
+    </div>
+</a>
+
+                    
+                        <a href="/mime.html">
+    <div class="card bg-emerald-500"  >
+        <i class="icon icon-style"></i>
+        <p>MIME types</p>
+    </div>
+</a>
+
+                    
+                </div>
+            
+        </div>
+    </div>
+</section>
+<section class="text-slate-800 max-container">
+    <div class=" mx-auto flex py-12 items-center justify-center flex-col">
+        <span class="inline-block h-1 w-10 rounded-full bg-emerald-500 mt-8 mb-6"></span>
+        <div class="text-center lg:w-2/3 w-full">
+            <h3 class="sm:text-4xl text-3xl mb-4 font-medium text-slate-800 dark:text-slate-300">See something missing?</h3>
+            <p class="mb-8 leading-relaxed dark:text-slate-300">
+                The above list does not see what you want? Are you looking for some cheatsheets or references, or you
+                have
+                some snippet cheatsheets to share, it's a best chance to do it!
+            </p>
+            <div class="flex flex-col md:flex-row justify-center">
+                <a target="_blank" rel="noopener" href="https://github.com/Fechin/reference/issues/new?title=Cheatsheet+request%3A+&labels=request&template=cheatsheet-request.md&assignee=Fechin"
+                   class="inline-flex text-slate-50 dark:text-slate-300 bg-emerald-500 dark:bg-opacity-80 self-center md:self-auto border-0 py-2 px-6 focus:outline-none hover:shadow-xl hover:bg-emerald-600 rounded-full text-lg fadeIn">
+                    Request cheatsheet
+                </a>
+                <a target="_blank" rel="noopener" href="https://github.com/Fechin/reference/blob/main/README.md#contributing"
+                   class="mt-6 md:mt-0 md:ml-4 inline-flex text-slate-700 dark:text-slate-300 bg-slate-300 dark:bg-slate-800 self-center md:self-auto  border-0 py-2 px-6 focus:outline-none hover:shadow-xl hover:bg-slate-400 rounded-full text-lg fadeIn">
+                    I have a cheatsheet
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="mysearch"
+     class="z-50 fixed inset-0 flex justify-center bg-slate-600/80 dark:bg-slate-900/90 items-start text-sm z-50 overflow-hidden lg:pt-16 lg:pb-20 hidden">
+    <div id="mysearch-box"
+         class="lg:max-w-screen-lg w-full flex flex-col justify-between bg-white dark:bg-slate-700 shadow-3xl dark:shadow-3xl lg:rounded-lg lg:max-h-832 min-h-320 h-full">
+        <div class="flex items-center h-16 flex-none border-b border-slate-200 dark:border-slate-700">
+            <div class="w-full h-full">
+                <form class="flex items-center w-full h-full outline-none rounded-tl-lg">
+                    <label for="mysearch-input" id="mysearch-label"
+                           class="h-full w-14 mt-1 ml-1 px-4 flex items-center justify-center transition-colors duration-200 ease-in-out text-emerald-200">
+                        <i class="icon icon-search text-2xl text-emerald-500"></i>
+                    </label>
+                    <div class="relative flex-1">
+                        <input class="flex-1 font-light h-full bg-transparent focus:text-slate-900 text-slate-500 dark:text-slate-300 placeholder-slate-400 placeholder-opacity-80 shadow-none outline-none truncate text-lg sm:text-2xl caret-color-emerald-400 leading-normalized w-full appearance-none rounded-none transition-colors duration-200 ease-in-out"
+                               id="mysearch-input"
+                               autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                               placeholder="Search for cheatsheet" maxlength="128" type="text"
+                               enterkeyhint="go">
+                    </div>
+                    <button id="mysearch-clear" type="reset"
+                            class="items-center justify-center h-full w-14 px-4 text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-100 opacity-75 fill-current cursor-pointer transition-fast-out flex">
+                        <i class="icon icon-close text-xs font-bold"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="w-px h-8 bg-slate-100 dark:bg-slate-400/20 flex-none"></div>
+            <button class="cancel mr-1 px-4 h-full text-slate-500 dark:text-slate-300 hover:text-slate-800 dark:hover:text-slate-300">
+                Cancel
+            </button>
+        </div>
+        <div class="flex flex-grow overflow-hidden lg:rounded-br-lg">
+            <!-- Search result -->
+            <div class="relative w-full flex-none overflow-y-auto lg:w-1/2">
+                <ul id="mysearch-list"></ul>
+            </div>
+            <!-- Preview panel -->
+            <div class="preview-panel shadow-inner bg-slate-100 dark:bg-slate-800 lg:block w-1/2 flex-none overflow-y-auto">
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 md:mt-14">
+    
+        <div class="max-container mb-8 md:py-10 mx-auto flex md:items-center lg:items-start md:flex-row flex-col">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:flex-grow md:flex -mb-10 md:mt-0 mt-10">
+                <div class="md:w-1/2 md:pr-4">
+                    
+<h2 class="my-6 text-xl text-slate-700 dark:text-slate-300">Top <span class="text-slate-400">Cheatsheet</span></h2>
+<section class="w-full grid grid-cols-2 gap-2 md:gap-4">
+    
+        <a href="/python.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Python
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/vim.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Vim
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/javascript.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">JavaScript
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/bash.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Bash
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+</section>
+
+                </div>
+                <div class="md:w-1/2 md:pl-4">
+                    <h2 class="my-6 text-xl text-slate-700 dark:text-slate-300">Recent <span class="text-slate-400">Cheatsheet</span></h2>
+<section class="w-full grid grid-cols-2 gap-2 md:gap-4">
+    
+        <a href="/pm2.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">PM2
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/adobe-photoshop.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Adobe Photoshop Keyboard Shortcuts
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/apex-legends.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Apex Legends Keyboard Shortcuts
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+        <a href="/figma.html"
+   class="group flex items-center p-3 bg-slate-50 rounded-lg hover:shadow dark:bg-slate-900 hover:bg-emerald-500 fadeIn">
+    <div class="ml-4 truncate hover:text-clip overflow-hidden">
+        <p class="mb-1 text-sm font-medium text-slate-900 dark:text-slate-300 group-hover:text-white">Figma Keyboard Shortcuts
+            <span class="text-slate-400 group-hover:text-white"> Cheatsheet</span>
+        </p>
+        <p class="text-sm font-normal text-slate-400 group-hover:text-white">Quick Reference</p>
+    </div>
+</a>
+    
+</section>
+
+                </div>
+            </div>
+            <div class="hidden md:block flex-shrink-0 mx-auto block mt-8 md:mx-8 max-w-xs">
+                <a href="/" class="flex font-medium items-center justify-center md:justify-start text-slate-800 dark:text-slate-300">
+    
+    <span class="domain text-slate-600 dark:text-slate-300 text-lg md:text-2xl">Quick<span class="text-emerald-400">Ref</span>.ME</span>
+</a>
+
+
+                <h4 class="mt-5 text-sm text-slate-500">Share quick reference and cheat sheet for developers.</h4>
+                
+                <div class="share mt-8">
+                    <div class="inline-flex text-slate-500 sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start ">
+    <a class="mr-3 fadeIn hover:text-slate-700 dark:hover:text-slate-300" href="https://facebook.com/sharer/sharer.php?u=https://quickref.me/index.html" rel="external nofollow noreferrer" target="_blank"><i class="icon text-xl icon-facebook"></i></a>
+    <a class="mx-3 fadeIn hover:text-slate-700 dark:hover:text-slate-300" href="https://twitter.com/intent/tweet/?text=Share%20quick%20reference%20and%20cheat%20sheet%20for%20developers&url=https://quickref.me/index.html" rel="external nofollow noreferrer" target="_blank"><i class="icon text-xl icon-twitter"></i></a>
+    <a class="mx-3 fadeIn hover:text-slate-700 dark:hover:text-slate-300" href="https://reddit.com/submit/?url=https://quickref.me/index.html&resubmit=true&title=Share%20quick%20reference%20and%20cheat%20sheet%20for%20developers" rel="external nofollow noreferrer" target="_blank"><i class="icon text-xl icon-reddit"></i></a>
+    <a class="mx-3 fadeIn hover:text-slate-700 dark:hover:text-slate-300" href="https://pinterest.com/pin/create/button/?url=https://quickref.me/index.html&description=Share%20quick%20reference%20and%20cheat%20sheet%20for%20developers" rel="external nofollow noreferrer" target="_blank"><i class="icon text-xl icon-pinterest"></i></a>
+    <a class="ml-3 fadeIn hover:text-slate-700 dark:hover:text-slate-300" href="https://www.linkedin.com/shareArticle?url=https://quickref.me/index.html&title=QuickRef.ME%20-%20Quick%20Reference%20Cheat%20Sheet&summary=Share%20quick%20reference%20and%20cheat%20sheet%20for%20developers" rel="external nofollow noreferrer" target="_blank"><i class="icon text-xl icon-linkedin"></i></a>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="max-container border-b border-slate-300 dark:border-slate-700"></div>
+    
+    <div class="max-container flex flex-col sm:flex-row items-center ">
+        <p class="py-2 md:py-3 text-slate-500 text-sm text-center w-full">
+            © 2022 QuickRef.ME, All rights reserved.
+        </p>
+    </div>
+</footer>
+<div id="carbon_container"></div>
+</body>
+
+<script src="/js/main.js"></script>
+
+
+
+</html>
