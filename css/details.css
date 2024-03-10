@@ -1,0 +1,36 @@
+/* 自定义 details 外观 */
+details {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* 自定义 summary 外观 */
+  summary {
+    display: block;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* 鼠标悬停时的样式 */
+  summary:hover {
+    background-color: #e0e0e0;
+  }
+  
+/* details 展开时的样式 */
+details[open] summary {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  /* details 展开时的内容区域样式 */
+  details[open] p {
+    margin-top: 10px;
+    background-color: #f5f5f5;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+    
