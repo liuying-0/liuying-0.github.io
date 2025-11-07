@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数学知识点 | 卡比之星'blog</title><meta name="author" content="卡比之星"><meta name="copyright" content="卡比之星"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="10月9日欧拉方程表现形式$x^ny^{(n)} + a_1x^{n-1}y^{(n-1)} + \dots + a_{n-1}xy’+a_ny&#x3D;f(x)$ 的方程被称为欧拉方程 解题思想令 $x&#x3D;e^t$ ，即将自由变量由 $x$ 换成 $t$ ，对前 $n$ 阶进行代换，可得  一阶：$\frac{dy}{dt}&#x3D;\frac{dy}{dx}*\frac{dx}{d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学知识点">
+<meta property="og:url" content="https://liuying-0.github.io/2025/10/09/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9/index.html">
+<meta property="og:site_name" content="卡比之星&#39;blog">
+<meta property="og:description" content="10月9日欧拉方程表现形式$x^ny^{(n)} + a_1x^{n-1}y^{(n-1)} + \dots + a_{n-1}xy’+a_ny&#x3D;f(x)$ 的方程被称为欧拉方程 解题思想令 $x&#x3D;e^t$ ，即将自由变量由 $x$ 换成 $t$ ，对前 $n$ 阶进行代换，可得  一阶：$\frac{dy}{dt}&#x3D;\frac{dy}{dx}*\frac{dx}{d">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg">
+<meta property="article:published_time" content="2025-10-09T03:45:20.000Z">
+<meta property="article:modified_time" content="2025-10-09T09:03:06.727Z">
+<meta property="article:author" content="卡比之星">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="容易忘记的公式或解法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "数学知识点",
+  "url": "https://liuying-0.github.io/2025/10/09/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9/",
+  "image": "http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg",
+  "datePublished": "2025-10-09T03:45:20.000Z",
+  "dateModified": "2025-10-09T09:03:06.727Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "卡比之星",
+      "url": "https://liuying-0.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg"><link rel="canonical" href="https://liuying-0.github.io/2025/10/09/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数学知识点',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://ibing.study.st/rand);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类页</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://ibing.study.st/rand);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">卡比之星'blog</span></a><a class="nav-page-title" href="/"><span class="site-name">数学知识点</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类页</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">数学知识点</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-09T03:45:20.000Z" title="发表于 2025-10-09 11:45:20">2025-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-09T09:03:06.727Z" title="更新于 2025-10-09 17:03:06">2025-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94/%E6%95%B0%E5%AD%A6%E4%B8%80/">数学一</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">487</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="10月9日"><a href="#10月9日" class="headerlink" title="10月9日"></a>10月9日</h2><h3 id="欧拉方程"><a href="#欧拉方程" class="headerlink" title="欧拉方程"></a>欧拉方程</h3><h4 id="表现形式"><a href="#表现形式" class="headerlink" title="表现形式"></a>表现形式</h4><p>$x^ny^{(n)} + a_1x^{n-1}y^{(n-1)} + \dots + a_{n-1}xy’+a_ny&#x3D;f(x)$ 的方程被称为欧拉方程</p>
+<h4 id="解题思想"><a href="#解题思想" class="headerlink" title="解题思想"></a>解题思想</h4><p>令 $x&#x3D;e^t$ ，即将自由变量由 $x$ 换成 $t$ ，对前 $n$ 阶进行代换，可得</p>
+<ul>
+<li>一阶：$\frac{dy}{dt}&#x3D;\frac{dy}{dx}*\frac{dx}{dt}&#x3D;e^{t}\frac{dy}{dx}&#x3D;x\frac{dy}{dx}$</li>
+<li>二阶：$\frac{d^2y}{dt^2}&#x3D;\frac{d(\frac{dy}{dt})}{dt}&#x3D;\frac{d(\frac{dy}{dx})}{dx}\frac{dx}{dt}&#x3D;e^{t}\frac{d(x\frac{dy}{dx})}{dx}&#x3D;x(\frac{dy}{dx}+x\frac{d^2y}{dx^2})&#x3D;x\frac{dy}{dx}+x^2\frac{d^2y}{dx^2}$</li>
+<li>三阶：$\frac{d^3y}{dt^3}&#x3D;x\frac{dy}{dx}+3x^2\frac{d^2y}{dx^2}+x^3\frac{d^3y}{dx^3}$</li>
+<li>以此类推</li>
+</ul>
+<p>利用二阶减一阶，三阶减二阶可得</p>
+<ul>
+<li><p>$xy’&#x3D;\frac{dy}{dt}$</p>
+</li>
+<li><p>$x^2y’’&#x3D;\frac{d^2y}{dt^2}-\frac{dy}{dt}$</p>
+</li>
+<li><p>$x^3y’’’&#x3D;\frac{d^3y}{dt^3}-3\frac{d^2y}{dt^2}+2\frac{dy}{dt}$</p>
+</li>
+<li><p>以此类推</p>
+</li>
+</ul>
+<p>此时，我们引入微分算子，即 $D&#x3D;\frac{d}{dt}$ ，则上式可更换为</p>
+<ul>
+<li>$xy’&#x3D;Dy$</li>
+<li>$x^2y’’&#x3D;D^2y-Dy&#x3D;D(D-1)y$</li>
+<li>$x^3y’’’&#x3D;D^3y-3D^2y+2Dy&#x3D;D(D-1)(D-2)y$</li>
+<li>以此类推</li>
+<li>$x^ny^{(n)}&#x3D;D(D-1)\dots(D-n+1)y$</li>
+</ul>
+<p>将上述的带入原方程中， 则可将原方程化简为高阶常系数线性微分方程，可以通过其特征方程来进行求解。</p>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>欧拉方程 $x^2\frac{d^2y}{dx^2}+4x\frac{dy}{dx}+2y&#x3D;0\ \ (x&gt;0)$ 的通解为？</p>
+<ol>
+<li>设 $x&#x3D;e^t$ ，显然有 $x^2\frac{d^2y}{dx^2}&#x3D;D(D-1)y&#x3D;D^2y-Dy$ ，$xy’&#x3D;Dy$ </li>
+<li>化简原式可得 $\frac{d^2y}{dt^2}+3\frac{dy}{dt}+2y&#x3D;0$ ，显然可以使用高阶常系数齐次线性微分方程的求解方法来解</li>
+<li>写出其特征方程为 $\lambda^2+3\lambda+2&#x3D;0$，解得 $\lambda_1&#x3D;-2$ ，$\lambda_2&#x3D;-1$</li>
+<li>故通解为 $y&#x3D;C_1e^{-t}+C_2e^{-2t}$ ，换回 $x$ 得 $y&#x3D;\frac{C_1}{x}+\frac{C<br>_2}{x^2}$</li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="post-meta__tags" href="/tags/%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E7%9A%84%E5%85%AC%E5%BC%8F%E6%88%96%E8%A7%A3%E6%B3%95/">容易忘记的公式或解法</a></div><div class="post-share"><div class="social-share" data-image="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/11/02/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/" title="马克思主义原理"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">马克思主义原理</div></div><div class="info-2"><div class="info-item-1">历史基础 唯物史观和剩余价值学说使得社会主义由空想变为了现实 资本主义的发展是马克思主义产生的社会根源 无产阶级在反抗资产阶级剥削和压迫的斗争中逐步走向自觉，并迫切渴望科学的理论指导是马克思主义产生的阶级基础 标志着现代无产阶级作为独立的政治力量登上历史的舞台的三大工人运动 法国里昂工人两次起义 英国宪章运动 德国西里西亚纺织工人起义     马克思主义产生的思想渊源 主要来源于19世纪西欧三大先进的思潮 德国古典哲学 英国古典政治经济学 英、法两国空想社会主义   自然前提是19世纪三大科学发现 细胞学说 能量守恒定律 生物进化论   思想前提是两个转变 即从唯心主义向唯物主义的转变 从革命民主主义向共产主义的转变     1844年2月，马克思和恩格斯在《德法年鉴》上发表论文 表明他们完成了从唯心主义向唯物主义、从革命民主主义向共产主义的转变   1845年2月，马克思和恩格斯合著了《神圣家族》 是他们合著的第一部著作   1845年，马克思恩格斯合著的《德意志意识形态》 首次系统的阐述了历史唯物主义的基本观点   1848年2月，《共产党宣言》的发表 标志着马克思主义的公开...</div></div></div></a><a class="pagination-related" href="/2025/09/09/Verilator%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Verilator使用方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Verilator使用方法</div></div><div class="info-2"><div class="info-item-1">基础知识对于Verilator的基本使用，是基于ysyx下的npc文件夹所构建的，故下述内容也会基于npc文件夹所做，文件结构如下： 12345678npc/├── csrc/│   └── main.cpp├── vsrc/│   └── top.v├── constr/│   └── top.nxdc└── Makefile  其中csrc用于存放C++驱动，vsrc用于存放Verilog模块，constr用于存放NVBoard的约束文件，用于与NVBoard进行链接，Makefile则是编译运行相关代码。 本文主要针对Verilog基本语法，C++代码接入Verilog的基本语法，C++代码实现输出波纹文件的基本语法，Makefile文件的基本写法四部分组成。对于接入NVBoard的方法，见NVBoard使用方法。 Verilog模块基本知识（注：内容基于菜鸟教程、hdlbits以及AI大致写成，用于自己参考） 结合C语言的学习，故对于Verilog的学习主要考虑了两个问题：  对于单个模块，其内部的语法是什么 对于整体项目，模块之间如何实现关联  单个模块的写法模块之间的...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">卡比之星</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuying-0/"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E6%9C%889%E6%97%A5"><span class="toc-number">1.</span> <span class="toc-text">10月9日</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text">欧拉方程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">表现形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3"><span class="toc-number">1.1.2.</span> <span class="toc-text">解题思想</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">示例</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/07/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a><time datetime="2025-11-07T05:30:15.000Z" title="发表于 2025-11-07 13:30:15">2025-11-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/02/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%8E%9F%E7%90%86/" title="马克思主义原理">马克思主义原理</a><time datetime="2025-11-02T05:32:02.000Z" title="发表于 2025-11-02 13:32:02">2025-11-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86%E7%82%B9/" title="数学知识点">数学知识点</a><time datetime="2025-10-09T03:45:20.000Z" title="发表于 2025-10-09 11:45:20">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/09/Verilator%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Verilator使用方法">Verilator使用方法</a><time datetime="2025-09-09T08:43:11.000Z" title="发表于 2025-09-09 16:43:11">2025-09-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/07/%E8%8B%B1%E8%AF%AD%E9%98%85%E8%AF%BB%E7%90%86%E8%AE%BA/" title="英语阅读理论">英语阅读理论</a><time datetime="2025-09-07T06:52:32.000Z" title="发表于 2025-09-07 14:52:32">2025-09-07</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 卡比之星</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
