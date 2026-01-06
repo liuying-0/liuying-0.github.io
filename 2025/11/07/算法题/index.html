@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>算法题 | 卡比之星'blog</title><meta name="author" content="卡比之星"><meta name="copyright" content="卡比之星"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2024年题目已知有向图 G 采用邻接矩阵存储，类型定义如下。 123456typedef struct	&#x2F;&#x2F; 图的类型定义&#123;  int numVertices, numEdges;	&#x2F;&#x2F; 图的顶点数和有向边数  char VerticesList[MAXV];	&#x2F;&#x2F; 定点表，MAXV为已定义常量  int Edge[MAXV][MAXV];	&#x2F;&#x2F; 邻接矩阵&#125;MGraph;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法题">
+<meta property="og:url" content="https://liuying-0.github.io/2025/11/07/%E7%AE%97%E6%B3%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="卡比之星&#39;blog">
+<meta property="og:description" content="2024年题目已知有向图 G 采用邻接矩阵存储，类型定义如下。 123456typedef struct	&#x2F;&#x2F; 图的类型定义&#123;  int numVertices, numEdges;	&#x2F;&#x2F; 图的顶点数和有向边数  char VerticesList[MAXV];	&#x2F;&#x2F; 定点表，MAXV为已定义常量  int Edge[MAXV][MAXV];	&#x2F;&#x2F; 邻接矩阵&#125;MGraph;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg">
+<meta property="article:published_time" content="2025-11-07T05:30:15.000Z">
+<meta property="article:modified_time" content="2025-11-11T10:01:55.000Z">
+<meta property="article:author" content="卡比之星">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="算法大题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "算法题",
+  "url": "https://liuying-0.github.io/2025/11/07/%E7%AE%97%E6%B3%95%E9%A2%98/",
+  "image": "http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg",
+  "datePublished": "2025-11-07T05:30:15.000Z",
+  "dateModified": "2025-11-11T10:01:55.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "卡比之星",
+      "url": "https://liuying-0.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&spec=640&img_type=jpg"><link rel="canonical" href="https://liuying-0.github.io/2025/11/07/%E7%AE%97%E6%B3%95%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法题',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://ibing.study.st/rand);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类页</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://ibing.study.st/rand);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">卡比之星'blog</span></a><a class="nav-page-title" href="/"><span class="site-name">算法题</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类页</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">算法题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-11-07T05:30:15.000Z" title="发表于 2025-11-07 13:30:15">2025-11-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-11T10:01:55.000Z" title="更新于 2025-11-11 18:01:55">2025-11-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%80%83%E7%A0%94/408%E4%B8%93%E4%B8%9A%E8%AF%BE/">408专业课</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">879</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="2024年"><a href="#2024年" class="headerlink" title="2024年"></a>2024年</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>已知有向图 <code>G</code> 采用邻接矩阵存储，类型定义如下。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>	// 图的类型定义</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="type">int</span> numVertices, numEdges;	<span class="comment">// 图的顶点数和有向边数</span></span><br><span class="line">  <span class="type">char</span> VerticesList[MAXV];	<span class="comment">// 定点表，MAXV为已定义常量</span></span><br><span class="line">  <span class="type">int</span> Edge[MAXV][MAXV];	<span class="comment">// 邻接矩阵</span></span><br><span class="line">&#125;MGraph;</span><br></pre></td></tr></table></figure>
+
+<p>请设计算法：<code>int uniquely(MGraph G)</code> ，判定 <code>G</code> 是否存在唯一的拓扑序列，若是，则返回1，否则返回0.要求如下。</p>
+<ol>
+<li>给出算法的基本设计思想。（4分）</li>
+<li>根据设计思想，采用 C 或 C++ 语言描述算法，关键之处给出注释。（9分）</li>
+</ol>
+<h3 id="解答"><a href="#解答" class="headerlink" title="解答"></a>解答</h3><h4 id="第一问"><a href="#第一问" class="headerlink" title="第一问"></a>第一问</h4><ol>
+<li>初始化next &#x3D; -1，count &#x3D; 0；</li>
+<li>扫描邻接矩阵，当扫到列为全零的点时做如下判断<ul>
+<li>若next &#x3D;&#x3D; -1，则记录next为当前列全零点点下标</li>
+<li>若next !&#x3D; -1，则return 0；</li>
+</ul>
+</li>
+<li>扫描完成后，count ++；</li>
+<li>记录now &#x3D; next，next &#x3D; -1；</li>
+<li>扫描下标为now的行<ul>
+<li>若矩阵中当前扫描的值为1，修改当前值为0，并扫描对应的列<ul>
+<li>若列为全0，则进行如下判断<ul>
+<li>若next &#x3D;&#x3D; -1，则记录next为当前列全零点的下标</li>
+<li>若next !&#x3D; -1，则return 0；</li>
+</ul>
+</li>
+<li>若列并非全0，则继续寻找下一个值为1的点</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>扫描完成后，count++</li>
+<li>对next的值进行判断<ul>
+<li>若next &#x3D;&#x3D; -1，则执行8</li>
+<li>若next !&#x3D; -1，则返回4</li>
+</ul>
+</li>
+<li>判断count值是否等于G.numVertices<ul>
+<li>若等于，则return 1</li>
+<li>反之，return 0</li>
+</ul>
+</li>
+</ol>
+<h4 id="第二问"><a href="#第二问" class="headerlink" title="第二问"></a>第二问</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">uniquely</span><span class="params">(MGraph G)</span>&#123;</span><br><span class="line">    <span class="type">int</span> next = <span class="number">-1</span>;	<span class="comment">// 记录下一次输出的节点</span></span><br><span class="line">    <span class="type">int</span> count = <span class="number">0</span>;	<span class="comment">// 记录输出节点的数量</span></span><br><span class="line">    <span class="type">int</span> now;	<span class="comment">// 记录当前待输出的节点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.numVertices; j++)&#123; 	<span class="comment">// 寻找第一个能够输出的节点，并记录入next中</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.numVertices; i++) &#123;	<span class="comment">// 判断该列对应的节点是否为可输出的节点</span></span><br><span class="line">            <span class="keyword">if</span>(G.Edge[i][j] != <span class="number">0</span>) <span class="keyword">break</span>;	<span class="comment">// 若存在值不为0的点，说明该点的入度不为0，不可输出</span></span><br><span class="line">            <span class="keyword">if</span>(i == G.numVertices<span class="number">-1</span>) &#123;	<span class="comment">// 若该列所有节点的值均为0，则说明为下次可输出的节点</span></span><br><span class="line">                <span class="keyword">if</span>(next == <span class="number">-1</span>) next = j;	<span class="comment">// 若之前没有可输出的节点，则设置当前的为下次输出节点</span></span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;	<span class="comment">// 若之前存在可输出的节点，则说明拓扑排序不唯一</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(next != <span class="number">-1</span>)&#123;</span><br><span class="line">        now = next;	<span class="comment">// 修改下一个输出节点为当前输出节点</span></span><br><span class="line">        next = <span class="number">-1</span>;	<span class="comment">// 重置下一个输出节点</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt; G.numVertices; j++)&#123; <span class="comment">// 输出节点</span></span><br><span class="line">            <span class="keyword">if</span>(G.Edge[now][j] == <span class="number">1</span>)&#123;	<span class="comment">// 若扫描到值为1的点，说明当前的节点为第j个节点的前驱节点，可以认为该节点可能是后续可能输出的节点</span></span><br><span class="line">                G.Edge[now][j] = <span class="number">0</span>;	<span class="comment">// 设置节点j与now对应的边的入度为0</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; G.numVertices; i++)&#123;	<span class="comment">// 判断该列对应的节点是否为可输出的节点，逻辑如上述相同</span></span><br><span class="line">                    <span class="keyword">if</span>(G.Edge[i][j] != <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">                    <span class="keyword">if</span>(i == G.numVertices<span class="number">-1</span>) &#123;</span><br><span class="line">                        <span class="keyword">if</span>(next == <span class="number">-1</span>) next = j;</span><br><span class="line">                        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        count ++;	<span class="comment">// 输出节点的数量+1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(count == G.numVertices) <span class="keyword">return</span> <span class="number">1</span>;	<span class="comment">// 若输出的全部节点，返回1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; <span class="comment">// 若输出的节点数量小于总节点数量，则说明存在环，返回0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2015年"><a href="#2015年" class="headerlink" title="2015年"></a>2015年</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">deep</span><span class="params">(BTree *root,<span class="type">int</span> n,<span class="type">int</span> &amp;wpl)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root-&gt;left==<span class="literal">NULL</span> &amp;&amp; root-&gt;right)</span><br><span class="line">    wpl += n*root-&gt;weight;</span><br><span class="line">  <span class="keyword">if</span>(root-&gt;left != <span class="literal">NULL</span>)</span><br><span class="line">    deep(root-&gt;left,n+<span class="number">1</span>,wpl);</span><br><span class="line">  <span class="keyword">if</span>(root-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">    deep(root-&gt;right,n+<span class="number">1</span>,wpl);</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">WPL</span><span class="params">(BTree *root)</span>&#123;</span><br><span class="line">  <span class="type">int</span> wpl;</span><br><span class="line">  deep(root,<span class="number">0</span>,wpl);</span><br><span class="line">  <span class="keyword">return</span> wpl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95%E5%A4%A7%E9%A2%98/">算法大题</a></div><div class="post-share"><div class="social-share" data-image="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" data-sites="wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/09/09/Verilator%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Verilator使用方法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Verilator使用方法</div></div><div class="info-2"><div class="info-item-1">基础知识对于Verilator的基本使用，是基于ysyx下的npc文件夹所构建的，故下述内容也会基于npc文件夹所做，文件结构如下： 12345678npc/├── csrc/│   └── main.cpp├── vsrc/│   └── top.v├── constr/│   └── top.nxdc└── Makefile  其中csrc用于存放C++驱动，vsrc用于存放Verilog模块，constr用于存放NVBoard的约束文件，用于与NVBoard进行链接，Makefile则是编译运行相关代码。 本文主要针对Verilog基本语法，C++代码接入Verilog的基本语法，C++代码实现输出波纹文件的基本语法，Makefile文件的基本写法四部分组成。对于接入NVBoard的方法，见NVBoard使用方法。 Verilog模块基本知识（注：内容基于菜鸟教程、hdlbits以及AI大致写成，用于自己参考） 结合C语言的学习，故对于Verilog的学习主要考虑了两个问题：  对于单个模块，其内部的语法是什么 对于整体项目，模块之间如何实现关联  单个模块的写法模块之间的...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/08/01/408%E5%A4%A7%E7%BA%B2/" title="408大纲"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-01</div><div class="info-item-2">408大纲</div></div><div class="info-2"><div class="info-item-1">数据结构思维导图 原文 绪论  数据结构的基本概念  算法的基本概念    线性表  线性表的基本概念  线性表的实现  顺序存储  链式存储    线性表的应用    栈、队列和数组  栈和队列的基本概念  栈和队列的顺序存储结构  栈和队列的链式存储结构  多维数组的存储  特殊矩阵的压缩存储  栈、队列和数组的应用    树与二叉树  树的基本概念  二叉树  二叉树的定义及其主要特征  二叉树的顺序存储结构和链式存储结构  二叉树的遍历  线索二叉树的基本概念和构造    树、森林  树的存储结构  森林与二叉树的转换  树和森林的遍历    树与二叉树的应用  哈夫曼（Huffman）树和哈夫曼编码  并查集及其应用  堆及其应用      图  图的基本概念  图的存储及基本操作  邻接矩阵  邻接表  邻接多重表、十字链表    图的遍历  深度优先搜索  广度优先搜索    图的基本应用  最小（代价）生成树  最短路径  拓扑排序  关键路径      查找  查找的基本概念  顺序查找法  分块查找法  折半查找法  树型查找  二叉搜索树  平衡二叉树  红...</div></div></div></a><a class="pagination-related" href="/2025/08/12/%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F/" title="内部排序"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-12</div><div class="info-item-2">内部排序</div></div><div class="info-2"><div class="info-item-1">内部排序9种内部排序算法的比较              类别         时间复杂度         空间复杂度         稳定性                   最好         最坏         平均                        插入排序         直接插入排序         O(n)         O(n²)         O(1)         √                   折半插入排序         O(nlog₂n)         O(n²)         O(1)         √                   希尔排序         无         无         O(n1.3)         O(1)         ×                        交换排序         冒泡排序         O(n)         O(n²)         O(1)         √                   快速排序         O(nlo...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="http://q.qlogo.cn/headimg_dl?dst_uin=2577539290&amp;spec=640&amp;img_type=jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">卡比之星</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liuying-0/"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2024%E5%B9%B4"><span class="toc-number">1.</span> <span class="toc-text">2024年</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E7%AD%94"><span class="toc-number">1.2.</span> <span class="toc-text">解答</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%97%AE"><span class="toc-number">1.2.1.</span> <span class="toc-text">第一问</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%97%AE"><span class="toc-number">1.2.2.</span> <span class="toc-text">第二问</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2015%E5%B9%B4"><span class="toc-number">1.3.</span> <span class="toc-text">2015年</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/07/%E7%AE%97%E6%B3%95%E9%A2%98/" title="算法题">算法题</a><time datetime="2025-11-07T05:30:15.000Z" title="发表于 2025-11-07 13:30:15">2025-11-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/09/Verilator%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" title="Verilator使用方法">Verilator使用方法</a><time datetime="2025-09-09T08:43:11.000Z" title="发表于 2025-09-09 16:43:11">2025-09-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/31/ysyx-F3/" title="ysyx F3">ysyx F3</a><time datetime="2025-08-31T06:33:49.716Z" title="发表于 2025-08-31 14:33:49">2025-08-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/12/%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F/" title="内部排序">内部排序</a><time datetime="2025-08-12T04:29:55.000Z" title="发表于 2025-08-12 12:29:55">2025-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/09/ysyx%E5%AD%A6%E4%B9%A0%E9%98%B6%E6%AE%B5/" title="ysyx学习阶段">ysyx学习阶段</a><time datetime="2025-08-09T03:26:00.000Z" title="发表于 2025-08-09 11:26:00">2025-08-09</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By 卡比之星</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
